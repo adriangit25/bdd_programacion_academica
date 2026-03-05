@@ -1,361 +1,552 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.0">
-  <diagram id="MER_Completo_PUCESI" name="MER - Sistema Programación Académica">
-    <mxGraphModel dx="1887" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+<mxfile host="app.diagrams.net" agent="Claude AI" version="24.0.0">
+  <diagram id="MER_Final_PUCESI_15_Tablas" name="MER Final - 15 Tablas">
+    <mxGraphModel dx="2800" dy="1800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2800" pageHeight="1800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="titulo" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1a237e;" value="MODELO ENTIDAD-RELACIÓN (MER)&#xa;Sistema de Programación Académica PUCE-SI&#xa;13 Tablas" vertex="1">
-          <mxGeometry height="70" width="500" x="900" y="20" as="geometry" />
+        
+        <!-- ============================================== -->
+        <!-- TÍTULO PRINCIPAL -->
+        <!-- ============================================== -->
+        <mxCell id="titulo_principal" value="MODELO ENTIDAD-RELACIÓN (MER) FINAL&#xa;Sistema Inteligente de Programación Académica PUCE-SI&#xa;15 Tablas - Versión Final" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#1e1b4b;" vertex="1" parent="1">
+          <mxGeometry x="900" y="20" width="600" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mod1_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#7c3aed;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" value="MÓDULO 1: AUTENTICACIÓN Y ROLES" vertex="1">
-          <mxGeometry height="30" width="680" x="40" y="100" as="geometry" />
+
+        <!-- ============================================== -->
+        <!-- MÓDULO 1: AUTENTICACIÓN Y ROLES -->
+        <!-- ============================================== -->
+        
+        <mxCell id="mod1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8ff;strokeColor=#9333ea;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="30" y="110" width="720" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="roles" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#c4b5fd;strokeColor=#7c3aed;fontColor=#1e1b4b;fontSize=12;" value="tbl_programacion_academica_roles" vertex="1">
-          <mxGeometry height="120" width="200" x="40" y="150" as="geometry" />
+        
+        <mxCell id="mod1_title" value="MÓDULO 1: AUTENTICACIÓN Y ROLES" style="text;html=1;strokeColor=none;fillColor=#7c3aed;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="700" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="roles_pk" parent="roles" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 par_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="200" y="30" as="geometry" />
+
+        <!-- TABLA: ROLES -->
+        <mxCell id="roles" value="tbl_programacion_academica_roles" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#c4b5fd;strokeColor=#7c3aed;fontColor=#1e1b4b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="165" width="200" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="roles_f1" parent="roles" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="par_nombre VARCHAR(50) NN" vertex="1">
-          <mxGeometry height="25" width="200" y="55" as="geometry" />
+        <mxCell id="roles_pk" value="🔑 par_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="roles">
+          <mxGeometry y="30" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="roles_f2" parent="roles" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="par_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="200" y="80" as="geometry" />
+        <mxCell id="roles_f1" value="par_nombre VARCHAR(50) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="roles">
+          <mxGeometry y="54" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="roles_sep" parent="roles" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#7c3aed;" value="" vertex="1">
-          <mxGeometry height="15" width="200" y="105" as="geometry" />
+        <mxCell id="roles_f2" value="par_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="roles">
+          <mxGeometry y="78" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usuario_rol" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e5e7eb;strokeColor=#6b7280;fontColor=#1f2937;fontSize=12;" value="tbl_programacion_academica_usuario_rol" vertex="1">
-          <mxGeometry height="120" width="220" x="280" y="150" as="geometry" />
+
+        <!-- TABLA: USUARIO_ROL (PIVOTE) -->
+        <mxCell id="usuario_rol" value="tbl_programacion_academica_usuario_rol" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e5e7eb;strokeColor=#6b7280;fontColor=#1f2937;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="165" width="200" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ur_pk" parent="usuario_rol" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 paur_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="220" y="30" as="geometry" />
+        <mxCell id="ur_pk" value="🔑 paur_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="usuario_rol">
+          <mxGeometry y="30" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ur_fk1" parent="usuario_rol" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pau_id BIGINT FK → usuarios" vertex="1">
-          <mxGeometry height="25" width="220" y="55" as="geometry" />
+        <mxCell id="ur_fk1" value="🔗 pau_id FK → usuarios" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="usuario_rol">
+          <mxGeometry y="54" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ur_fk2" parent="usuario_rol" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 par_id BIGINT FK → roles" vertex="1">
-          <mxGeometry height="25" width="220" y="80" as="geometry" />
+        <mxCell id="ur_fk2" value="🔗 par_id FK → roles" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="usuario_rol">
+          <mxGeometry y="78" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ur_note" parent="usuario_rol" style="text;strokeColor=none;fillColor=#fef9c3;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontStyle=2;" value="Pivote N:M" vertex="1">
-          <mxGeometry height="15" width="220" y="105" as="geometry" />
+
+        <!-- TABLA: USUARIOS -->
+        <mxCell id="usuarios" value="tbl_programacion_academica_usuarios" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bbf7d0;strokeColor=#16a34a;fontColor=#14532d;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="165" width="210" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="usuarios" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bbf7d0;strokeColor=#16a34a;fontColor=#14532d;fontSize=12;" value="tbl_programacion_academica_usuarios" vertex="1">
-          <mxGeometry height="210" width="220" x="540" y="150" as="geometry" />
+        <mxCell id="usr_pk" value="🔑 pau_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="30" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_pk" parent="usuarios" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pau_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="220" y="30" as="geometry" />
+        <mxCell id="usr_f1" value="pau_cedula VARCHAR(20) NN UK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="54" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f1" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_nombres VARCHAR(100) NN" vertex="1">
-          <mxGeometry height="25" width="220" y="55" as="geometry" />
+        <mxCell id="usr_f2" value="pau_nombres VARCHAR(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="78" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f2" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_apellidos VARCHAR(100) NN" vertex="1">
-          <mxGeometry height="25" width="220" y="80" as="geometry" />
+        <mxCell id="usr_f3" value="pau_apellidos VARCHAR(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="102" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f3" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_usuario VARCHAR(50) NN UK" vertex="1">
-          <mxGeometry height="25" width="220" y="105" as="geometry" />
+        <mxCell id="usr_f4" value="pau_usuario VARCHAR(50) NN UK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="126" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f4" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_contrasenia VARCHAR(255) NN" vertex="1">
-          <mxGeometry height="25" width="220" y="130" as="geometry" />
+        <mxCell id="usr_f5" value="pau_contrasenia VARCHAR(255) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="150" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f5" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_cedula VARCHAR(20) NN UK" vertex="1">
-          <mxGeometry height="25" width="220" y="155" as="geometry" />
+        <mxCell id="usr_f6" value="pau_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="usuarios">
+          <mxGeometry y="174" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="usr_f6" parent="usuarios" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pau_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="220" y="180" as="geometry" />
-        </mxCell>
-        <mxCell id="rel_ur_roles" edge="1" parent="1" source="roles_pk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#7c3aed;strokeWidth=2;" target="ur_fk2">
+
+        <!-- RELACIONES MÓDULO 1 -->
+        <mxCell id="rel_roles_ur" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#7c3aed;strokeWidth=2;" edge="1" parent="1" source="roles_pk" target="ur_fk2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_ur_usr" edge="1" parent="1" source="usr_pk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16a34a;strokeWidth=2;" target="ur_fk1">
+        <mxCell id="rel_usr_ur" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16a34a;strokeWidth=2;" edge="1" parent="1" source="usr_pk" target="ur_fk1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mod2_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#0d9488;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" value="MÓDULO 2: DOCENTES Y ÁREAS DE CONOCIMIENTO" vertex="1">
-          <mxGeometry height="30" width="680" x="800" y="100" as="geometry" />
+
+        <!-- ============================================== -->
+        <!-- MÓDULO 2: DOCENTES Y ÁREAS -->
+        <!-- ============================================== -->
+        
+        <mxCell id="mod2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0d9488;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="770" y="110" width="720" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="docentes" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#99f6e4;strokeColor=#0d9488;fontColor=#134e4a;fontSize=12;" value="tbl_programacion_academica_docentes" vertex="1">
-          <mxGeometry height="210" width="230" x="800" y="150" as="geometry" />
+        
+        <mxCell id="mod2_title" value="MÓDULO 2: DOCENTES Y ÁREAS DE CONOCIMIENTO" style="text;html=1;strokeColor=none;fillColor=#0d9488;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="120" width="700" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="doc_pk" parent="docentes" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pad_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+
+        <!-- TABLA: DOCENTES -->
+        <mxCell id="docentes" value="tbl_programacion_academica_docentes" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#99f6e4;strokeColor=#0d9488;fontColor=#134e4a;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="790" y="165" width="220" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="doc_fk" parent="docentes" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pau_id BIGINT FK → usuarios" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+        <mxCell id="doc_pk" value="🔑 pad_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="30" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="doc_f1" parent="docentes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pad_titulo_grado VARCHAR(150)" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="doc_fk" value="🔗 pau_id FK → usuarios (UNIQUE)" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="docentes">
+          <mxGeometry y="54" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="doc_f2" parent="docentes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pad_titulo_posgrado VARCHAR(150)" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="doc_f1" value="pad_titulo_grado VARCHAR(200)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="78" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="doc_f3" parent="docentes" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pad_horas_minimas INT" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+        <mxCell id="doc_f2" value="pad_titulo_posgrado VARCHAR(200)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="102" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="doc_f4" parent="docentes" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pad_horas_maximas INT" vertex="1">
-          <mxGeometry height="25" width="230" y="155" as="geometry" />
+        <mxCell id="doc_f3" value="pad_horas_minimas INT" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="126" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="doc_f5" parent="docentes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pad_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="180" as="geometry" />
+        <mxCell id="doc_f4" value="pad_horas_maximas INT" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="150" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="docente_area" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e5e7eb;strokeColor=#6b7280;fontColor=#1f2937;fontSize=12;" value="tbl_programacion_academica_docente_area" vertex="1">
-          <mxGeometry height="120" width="220" x="1070" y="150" as="geometry" />
+        <mxCell id="doc_f5" value="pad_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="docentes">
+          <mxGeometry y="174" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="da_pk" parent="docente_area" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pada_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="220" y="30" as="geometry" />
+
+        <!-- TABLA: DOCENTE_AREA (PIVOTE) -->
+        <mxCell id="docente_area" value="tbl_programacion_academica_docente_area" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e5e7eb;strokeColor=#6b7280;fontColor=#1f2937;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="165" width="200" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="da_fk1" parent="docente_area" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pad_id BIGINT FK → docentes" vertex="1">
-          <mxGeometry height="25" width="220" y="55" as="geometry" />
+        <mxCell id="da_pk" value="🔑 pada_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="docente_area">
+          <mxGeometry y="30" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="da_fk2" parent="docente_area" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 paa_id BIGINT FK → areas" vertex="1">
-          <mxGeometry height="25" width="220" y="80" as="geometry" />
+        <mxCell id="da_fk1" value="🔗 pad_id FK → docentes" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="docente_area">
+          <mxGeometry y="54" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="da_note" parent="docente_area" style="text;strokeColor=none;fillColor=#fef9c3;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontStyle=2;" value="Pivote N:M" vertex="1">
-          <mxGeometry height="15" width="220" y="105" as="geometry" />
+        <mxCell id="da_fk2" value="🔗 paa_id FK → areas" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="docente_area">
+          <mxGeometry y="78" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="areas" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fef08a;strokeColor=#ca8a04;fontColor=#713f12;fontSize=12;" value="tbl_programacion_academica_areas" vertex="1">
-          <mxGeometry height="120" width="200" x="1330" y="150" as="geometry" />
+
+        <!-- TABLA: AREAS -->
+        <mxCell id="areas" value="tbl_programacion_academica_areas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fef08a;strokeColor=#ca8a04;fontColor=#713f12;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="165" width="190" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="area_pk" parent="areas" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 paa_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="200" y="30" as="geometry" />
+        <mxCell id="area_pk" value="🔑 paa_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="areas">
+          <mxGeometry y="30" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="area_f1" parent="areas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paa_nombre VARCHAR(100) NN" vertex="1">
-          <mxGeometry height="25" width="200" y="55" as="geometry" />
+        <mxCell id="area_f1" value="paa_nombre VARCHAR(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="areas">
+          <mxGeometry y="54" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="area_f2" parent="areas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paa_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="200" y="80" as="geometry" />
+        <mxCell id="area_f2" value="paa_descripcion TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="areas">
+          <mxGeometry y="78" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="area_sep" parent="areas" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#ca8a04;" value="" vertex="1">
-          <mxGeometry height="15" width="200" y="105" as="geometry" />
+        <mxCell id="area_f3" value="paa_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="areas">
+          <mxGeometry y="102" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="rel_doc_usr" edge="1" parent="1" source="doc_fk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16a34a;strokeWidth=2;" target="usr_pk">
+
+        <!-- RELACIONES MÓDULO 2 -->
+        <mxCell id="rel_doc_usr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16a34a;strokeWidth=2;" edge="1" parent="1" source="doc_fk" target="usr_pk">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_da_doc" edge="1" parent="1" source="doc_pk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#0d9488;strokeWidth=2;" target="da_fk1">
+        <mxCell id="rel_doc_da" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#0d9488;strokeWidth=2;" edge="1" parent="1" source="doc_pk" target="da_fk1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_da_area" edge="1" parent="1" source="area_pk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#ca8a04;strokeWidth=2;" target="da_fk2">
+        <mxCell id="rel_area_da" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#ca8a04;strokeWidth=2;" edge="1" parent="1" source="area_pk" target="da_fk2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mod3_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#2563eb;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" value="MÓDULO 3: ESTRUCTURA ACADÉMICA" vertex="1">
-          <mxGeometry height="30" width="950" x="40" y="420" as="geometry" />
+
+        <!-- ============================================== -->
+        <!-- MÓDULO 3: ESTRUCTURA ACADÉMICA -->
+        <!-- ============================================== -->
+        
+        <mxCell id="mod3_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="1000" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="escuelas" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bfdbfe;strokeColor=#2563eb;fontColor=#1e3a8a;fontSize=12;" value="tbl_programacion_academica_escuelas" vertex="1">
-          <mxGeometry height="185" width="230" x="40" y="470" as="geometry" />
+        
+        <mxCell id="mod3_title" value="MÓDULO 3: ESTRUCTURA ACADÉMICA" style="text;html=1;strokeColor=none;fillColor=#2563eb;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="980" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="esc_pk" parent="escuelas" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pae_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+
+        <!-- TABLA: PERIODOS -->
+        <mxCell id="periodos" value="tbl_programacion_academica_periodos" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fbcfe8;strokeColor=#db2777;fontColor=#831843;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="465" width="220" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="esc_f1" parent="escuelas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pae_nombre VARCHAR(150) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+        <mxCell id="per_pk" value="🔑 pap_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="30" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="esc_f2" parent="escuelas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pae_codigo VARCHAR(20) NN UK" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="per_f1" value="pap_codigo VARCHAR(20) NN UK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="54" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="esc_f3" parent="escuelas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pae_descripcion TEXT" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="per_f2" value="pap_nombre VARCHAR(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="78" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="esc_f4" parent="escuelas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pae_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+        <mxCell id="per_f3" value="pap_fecha_inicio DATE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="102" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="esc_fk" parent="escuelas" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pad_id BIGINT FK (director)" vertex="1">
-          <mxGeometry height="25" width="230" y="155" as="geometry" />
+        <mxCell id="per_f4" value="pap_fecha_fin DATE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="126" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="carreras" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bbf7d0;strokeColor=#16a34a;fontColor=#14532d;fontSize=12;" value="tbl_programacion_academica_carreras" vertex="1">
-          <mxGeometry height="185" width="230" x="310" y="470" as="geometry" />
+        <mxCell id="per_f5" value="pap_numero_semanas INT DEFAULT 16" style="text;strokeColor=none;fillColor=#bbf7d0;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontStyle=1;" vertex="1" parent="periodos">
+          <mxGeometry y="150" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="car_pk" parent="carreras" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pac_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+        <mxCell id="per_f6" value="pap_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="periodos">
+          <mxGeometry y="174" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="car_f1" parent="carreras" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pac_nombre VARCHAR(150) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+
+        <!-- TABLA: ESCUELAS -->
+        <mxCell id="escuelas" value="tbl_programacion_academica_escuelas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#c7d2fe;strokeColor=#4f46e5;fontColor=#312e81;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="300" y="465" width="220" height="175" as="geometry" />
         </mxCell>
-        <mxCell id="car_f2" parent="carreras" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pac_modalidad ENUM(&#39;Pres&#39;,&#39;Híb&#39;)" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="esc_pk" value="🔑 pae_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="escuelas">
+          <mxGeometry y="30" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="car_f3" parent="carreras" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pac_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="esc_f1" value="pae_codigo VARCHAR(20) NN UK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="escuelas">
+          <mxGeometry y="54" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="car_fk1" parent="carreras" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pae_id BIGINT FK → escuelas" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+        <mxCell id="esc_f2" value="pae_nombre VARCHAR(150) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="escuelas">
+          <mxGeometry y="78" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="car_fk2" parent="carreras" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pad_id BIGINT FK (coordinador)" vertex="1">
-          <mxGeometry height="25" width="230" y="155" as="geometry" />
+        <mxCell id="esc_f3" value="pae_descripcion TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="escuelas">
+          <mxGeometry y="102" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="materias" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fecaca;strokeColor=#dc2626;fontColor=#7f1d1d;fontSize=12;" value="tbl_programacion_academica_materias" vertex="1">
-          <mxGeometry height="285" width="230" x="580" y="470" as="geometry" />
+        <mxCell id="esc_f4" value="pae_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="escuelas">
+          <mxGeometry y="126" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_pk" parent="materias" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pam_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+        <mxCell id="esc_fk" value="🔗 pad_id FK → docentes (director)" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="escuelas">
+          <mxGeometry y="150" width="220" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f1" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_codigo VARCHAR(30) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+
+        <!-- TABLA: CARRERAS -->
+        <mxCell id="carreras" value="tbl_programacion_academica_carreras" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bbf7d0;strokeColor=#16a34a;fontColor=#14532d;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="550" y="465" width="230" height="225" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f2" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_nombre VARCHAR(150) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="car_pk" value="🔑 pac_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="30" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f3" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_horas_docencia INT" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="car_f1" value="pac_codigo_banner VARCHAR(20) UK" style="text;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="54" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f4" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_horas_practicas INT" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+        <mxCell id="car_f2" value="pac_nombre VARCHAR(150) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="78" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f5" parent="materias" style="text;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_nivel INT (1-8 semestre)" vertex="1">
-          <mxGeometry height="25" width="230" y="155" as="geometry" />
+        <mxCell id="car_f3" value="pac_pensum VARCHAR(10) NN" style="text;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="102" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f6" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_descripcion TEXT" vertex="1">
-          <mxGeometry height="25" width="230" y="180" as="geometry" />
+        <mxCell id="car_f4" value="pac_modalidad ENUM('Pres','Híb','Virt')" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="126" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_f7" parent="materias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pam_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="205" as="geometry" />
+        <mxCell id="car_f5" value="pac_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="carreras">
+          <mxGeometry y="150" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_fk1" parent="materias" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 paa_id BIGINT FK → areas" vertex="1">
-          <mxGeometry height="25" width="230" y="230" as="geometry" />
+        <mxCell id="car_fk1" value="🔗 pae_id FK → escuelas" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="carreras">
+          <mxGeometry y="174" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="mat_fk2" parent="materias" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" value="🔗 pac_id BIGINT FK → carreras" vertex="1">
-          <mxGeometry height="25" width="230" y="255" as="geometry" />
+        <mxCell id="car_fk2" value="🔗 pad_id FK → docentes (coord)" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="carreras">
+          <mxGeometry y="198" width="230" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="periodos" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fbcfe8;strokeColor=#db2777;fontColor=#831843;fontSize=12;" value="tbl_programacion_academica_periodos" vertex="1">
-          <mxGeometry height="135" width="230" x="850" y="470" as="geometry" />
+
+        <!-- TABLA: MATERIAS -->
+        <mxCell id="materias" value="tbl_programacion_academica_materias" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fecaca;strokeColor=#dc2626;fontColor=#7f1d1d;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="810" y="465" width="210" height="310" as="geometry" />
         </mxCell>
-        <mxCell id="per_pk" parent="periodos" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pap_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+        <mxCell id="mat_pk" value="🔑 pam_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="30" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="per_f1" parent="periodos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pap_codigo VARCHAR(20) NN UK" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+        <mxCell id="mat_f1" value="pam_codigo VARCHAR(30) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="54" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="per_f2" parent="periodos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pap_nombre VARCHAR(100) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="mat_f2" value="pam_nombre VARCHAR(150) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="78" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="per_f3" parent="periodos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pap_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="mat_f3" value="pam_horas_docencia INT" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="102" width="210" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="rel_car_esc" edge="1" parent="1" source="car_fk1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;startArrow=ERmany;startFill=0;strokeColor=#2563eb;strokeWidth=2;" target="esc_pk">
+        <mxCell id="mat_f4" value="pam_horas_practicas INT" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="126" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_f5" value="pam_horas_autonomas INT" style="text;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="150" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_f6" value="pam_total_horas INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="174" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_f7" value="pam_nivel INT (1-8)" style="text;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="198" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_f8" value="pam_descripcion TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="222" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_f9" value="pam_estado BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="materias">
+          <mxGeometry y="246" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_fk1" value="🔗 paa_id FK → areas" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="materias">
+          <mxGeometry y="270" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="mat_fk2" value="🔗 pac_id FK → carreras" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontColor=#1d4ed8;" vertex="1" parent="materias">
+          <mxGeometry y="288" width="210" height="18" as="geometry" />
+        </mxCell>
+
+        <!-- RELACIONES MÓDULO 3 -->
+        <mxCell id="rel_esc_car" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#4f46e5;strokeWidth=2;" edge="1" parent="1" source="esc_pk" target="car_fk1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_mat_car" edge="1" parent="1" source="mat_fk2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;startArrow=ERmany;startFill=0;strokeColor=#16a34a;strokeWidth=2;" target="car_pk">
+        <mxCell id="rel_car_mat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;strokeColor=#16a34a;strokeWidth=2;" edge="1" parent="1" source="car_pk" target="mat_fk2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_mat_area" edge="1" parent="1" source="mat_fk1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;startArrow=ERmany;startFill=0;strokeColor=#ca8a04;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="area_pk">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="840" y="713" />
-              <mxPoint x="840" y="400" />
-              <mxPoint x="1550" y="400" />
-              <mxPoint x="1550" y="193" />
-            </Array>
-          </mxGeometry>
+
+        <!-- ============================================== -->
+        <!-- MÓDULO 4: CONFIGURACIÓN GENERAL -->
+        <!-- ============================================== -->
+        
+        <mxCell id="mod4_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#ea580c;strokeWidth=2;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="410" width="460" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="mod4_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#ea580c;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" value="MÓDULO 4: CONFIGURACIÓN GENERAL" vertex="1">
-          <mxGeometry height="30" width="420" x="1120" y="420" as="geometry" />
+        
+        <mxCell id="mod4_title" value="MÓDULO 4: CONFIGURACIÓN GENERAL" style="text;html=1;strokeColor=none;fillColor=#ea580c;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="420" width="440" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bloques" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bfdbfe;strokeColor=#3b82f6;fontColor=#1e3a8a;fontSize=12;" value="tbl_programacion_academica_bloques_horarios" vertex="1">
-          <mxGeometry height="160" width="230" x="1120" y="470" as="geometry" />
+
+        <!-- TABLA: DIAS -->
+        <mxCell id="dias" value="tbl_programacion_academica_dias" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fde68a;strokeColor=#d97706;fontColor=#78350f;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="465" width="190" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="bh_pk" parent="bloques" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pabh_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+        <mxCell id="dia_pk" value="🔑 padi_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="dias">
+          <mxGeometry y="30" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="bh_f1" parent="bloques" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pabh_hora_inicio TIME NN" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+        <mxCell id="dia_f1" value="padi_nombre VARCHAR(20) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="dias">
+          <mxGeometry y="54" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="bh_f2" parent="bloques" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pabh_hora_fin TIME NN" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="dia_f2" value="padi_numero INT (1-7)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="dias">
+          <mxGeometry y="78" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="bh_f3" parent="bloques" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pabh_descripcion VARCHAR(50)" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="dia_f3" value="padi_estado BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="dias">
+          <mxGeometry y="102" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="bh_f4" parent="bloques" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pabh_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+
+        <!-- TABLA: BLOQUES_HORARIOS -->
+        <mxCell id="bloques" value="tbl_programacion_academica_bloques_horarios" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bfdbfe;strokeColor=#3b82f6;fontColor=#1e3a8a;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="465" width="200" height="155" as="geometry" />
         </mxCell>
-        <mxCell id="cursos" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#a5f3fc;strokeColor=#06b6d4;fontColor=#164e63;fontSize=12;" value="tbl_programacion_academica_cursos" vertex="1">
-          <mxGeometry height="105" width="200" x="1380" y="505" as="geometry" />
+        <mxCell id="bh_pk" value="🔑 pabh_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="bloques">
+          <mxGeometry y="30" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="cu_pk" parent="cursos" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 pacu_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="200" y="30" as="geometry" />
+        <mxCell id="bh_f1" value="pabh_hora_inicio TIME NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="bloques">
+          <mxGeometry y="54" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="cu_f1" parent="cursos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pacu_nombre VARCHAR(20) NN" vertex="1">
-          <mxGeometry height="25" width="200" y="55" as="geometry" />
+        <mxCell id="bh_f2" value="pabh_hora_fin TIME NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="bloques">
+          <mxGeometry y="78" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="cu_f2" parent="cursos" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="pacu_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="200" y="80" as="geometry" />
+        <mxCell id="bh_f3" value="pabh_descripcion VARCHAR(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="bloques">
+          <mxGeometry y="102" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="aulas" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fde68a;strokeColor=#f59e0b;fontColor=#78350f;fontSize=12;" value="tbl_programacion_academica_aulas" vertex="1">
-          <mxGeometry height="185" width="230" x="1120" y="660" as="geometry" />
+        <mxCell id="bh_f4" value="pabh_estado BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="bloques">
+          <mxGeometry y="126" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="au_pk" parent="aulas" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" value="🔑 paal_id BIGINT PK AI" vertex="1">
-          <mxGeometry height="25" width="230" y="30" as="geometry" />
+
+        <!-- TABLA: CURSOS -->
+        <mxCell id="cursos" value="tbl_programacion_academica_cursos" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#a5f3fc;strokeColor=#06b6d4;fontColor=#164e63;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="620" width="190" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="au_f1" parent="aulas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paal_codigo VARCHAR(20) NN UK" vertex="1">
-          <mxGeometry height="25" width="230" y="55" as="geometry" />
+        <mxCell id="cu_pk" value="🔑 pacu_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="cursos">
+          <mxGeometry y="30" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="au_f2" parent="aulas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paal_nombre VARCHAR(100) NN" vertex="1">
-          <mxGeometry height="25" width="230" y="80" as="geometry" />
+        <mxCell id="cu_f1" value="pacu_nombre VARCHAR(20) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="cursos">
+          <mxGeometry y="54" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="au_f3" parent="aulas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paal_capacidad INT" vertex="1">
-          <mxGeometry height="25" width="230" y="105" as="geometry" />
+        <mxCell id="cu_f2" value="pacu_descripcion VARCHAR(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="cursos">
+          <mxGeometry y="78" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="au_f4" parent="aulas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paal_tipo ENUM(&#39;Aula&#39;,&#39;Lab&#39;,&#39;Aud&#39;)" vertex="1">
-          <mxGeometry height="25" width="230" y="130" as="geometry" />
+        <mxCell id="cu_f3" value="pacu_estado BOOLEAN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="cursos">
+          <mxGeometry y="102" width="190" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="au_f5" parent="aulas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" value="paal_estado BOOLEAN DEFAULT TRUE" vertex="1">
-          <mxGeometry height="25" width="230" y="155" as="geometry" />
+
+        <!-- TABLA: AULAS -->
+        <mxCell id="aulas" value="tbl_programacion_academica_aulas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fde68a;strokeColor=#f59e0b;fontColor=#78350f;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="645" width="200" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="leyenda" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#9ca3af;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="280" width="300" x="1600" y="150" as="geometry" />
+        <mxCell id="au_pk" value="🔑 paal_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="30" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#374151;" value="📋 LEYENDA" vertex="1">
-          <mxGeometry height="25" width="300" x="1600" y="160" as="geometry" />
+        <mxCell id="au_f1" value="paal_codigo VARCHAR(20) NN UK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="54" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_pk" parent="1" style="text;html=1;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;spacingLeft=10;" value="🔑 = Primary Key (PK)" vertex="1">
-          <mxGeometry height="25" width="270" x="1615" y="195" as="geometry" />
+        <mxCell id="au_f2" value="paal_nombre VARCHAR(100) NN" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="78" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_fk" parent="1" style="text;html=1;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;spacingLeft=10;" value="🔗 = Foreign Key (FK)" vertex="1">
-          <mxGeometry height="25" width="270" x="1615" y="225" as="geometry" />
+        <mxCell id="au_f3" value="paal_codigo_banner VARCHAR(20)" style="text;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="102" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_nn" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;spacingLeft=10;" value="NN = NOT NULL | UK = UNIQUE" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="255" as="geometry" />
+        <mxCell id="au_f4" value="paal_capacidad INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="126" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_ai" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;spacingLeft=10;" value="AI = AUTO_INCREMENT" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="275" as="geometry" />
+        <mxCell id="au_f5" value="paal_tipo ENUM('Aula','Lab','Aud')" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="aulas">
+          <mxGeometry y="150" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="ley_sep" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#9ca3af;" value="" vertex="1">
-          <mxGeometry height="10" width="270" x="1615" y="300" as="geometry" />
+
+        <!-- ============================================== -->
+        <!-- MÓDULO 5: PROGRAMACIÓN DE HORARIOS -->
+        <!-- ============================================== -->
+        
+        <mxCell id="mod5_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=3;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="110" width="380" height="720" as="geometry" />
         </mxCell>
-        <mxCell id="ley_nom1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;spacingLeft=10;fontStyle=1" value="Tabla: tbl_programacion_academica_[nombre]" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="315" as="geometry" />
+        
+        <mxCell id="mod5_title" value="MÓDULO 5: PROGRAMACIÓN DE HORARIOS" style="text;html=1;strokeColor=none;fillColor=#16a34a;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="120" width="360" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ley_nom2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;spacingLeft=10;fontStyle=1" value="Campo: [prefijo]_[nombre_campo]" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="335" as="geometry" />
+
+        <!-- TABLA: HORARIOS (PRINCIPAL) -->
+        <mxCell id="horarios" value="tbl_programacion_academica_horarios" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#86efac;strokeColor=#16a34a;fontColor=#14532d;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="165" width="340" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="ley_sep2" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#9ca3af;" value="" vertex="1">
-          <mxGeometry height="10" width="270" x="1615" y="360" as="geometry" />
+        <mxCell id="hor_pk" value="🔑 pah_id BIGINT PK AI" style="text;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="35" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ley_pivot" parent="1" style="text;html=1;strokeColor=none;fillColor=#fef9c3;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;" value="Tablas Pivote = Relación N:M" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="375" as="geometry" />
+        <mxCell id="hor_f1" value="pah_nrc VARCHAR(20) NN" style="text;strokeColor=none;fillColor=#fef08a;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontStyle=1;" vertex="1" parent="horarios">
+          <mxGeometry y="61" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ley_horas" parent="1" style="text;html=1;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;" value="Campos naranja = Horas (Oficio 902)" vertex="1">
-          <mxGeometry height="20" width="270" x="1615" y="400" as="geometry" />
+        <mxCell id="hor_f2" value="pah_estudiantes_estimados INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="87" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="resumen" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1b4b;strokeColor=#312e81;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="390" width="300" x="1600" y="460" as="geometry" />
+        <mxCell id="hor_f3" value="pah_estudiantes_matriculados INT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="113" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="res_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" value="📊 RESUMEN: 13 TABLAS" vertex="1">
-          <mxGeometry height="25" width="300" x="1600" y="470" as="geometry" />
+        <mxCell id="hor_f4" value="pah_modalidad ENUM('Presencial','Virtual','Híbrida')" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="139" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="res_m1" parent="1" style="text;html=1;strokeColor=none;fillColor=#7c3aed;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#ffffff;spacingLeft=10;spacingTop=5;" value="MÓDULO 1: Autenticación&#xa;• par_ → roles&#xa;• pau_ → usuarios&#xa;• paur_ → usuario_rol" vertex="1">
-          <mxGeometry height="70" width="270" x="1615" y="505" as="geometry" />
+        <mxCell id="hor_f5" value="pah_observaciones TEXT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="165" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="res_m2" parent="1" style="text;html=1;strokeColor=none;fillColor=#0d9488;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#ffffff;spacingLeft=10;spacingTop=5;" value="MÓDULO 2: Docentes&#xa;• pad_ → docentes&#xa;• paa_ → areas&#xa;• pada_ → docente_area" vertex="1">
-          <mxGeometry height="70" width="270" x="1615" y="585" as="geometry" />
+        <mxCell id="hor_f6" value="pah_estado BOOLEAN DEFAULT TRUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="horarios">
+          <mxGeometry y="191" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="res_m3" parent="1" style="text;html=1;strokeColor=none;fillColor=#2563eb;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#ffffff;spacingLeft=10;spacingTop=5;" value="MÓDULO 3: Estructura Académica&#xa;• pae_ → escuelas&#xa;• pac_ → carreras&#xa;• pam_ → materias&#xa;• pap_ → periodos" vertex="1">
-          <mxGeometry height="85" width="270" x="1615" y="665" as="geometry" />
+        <mxCell id="hor_sep" value="" style="line;strokeWidth=2;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#16a34a;" vertex="1" parent="horarios">
+          <mxGeometry y="217" width="340" height="15" as="geometry" />
         </mxCell>
-        <mxCell id="res_m4" parent="1" style="text;html=1;strokeColor=none;fillColor=#ea580c;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#ffffff;spacingLeft=10;spacingTop=5;" value="MÓDULO 4: Configuración&#xa;• pabh_ → bloques_horarios&#xa;• pacu_ → cursos&#xa;• paal_ → aulas" vertex="1">
-          <mxGeometry height="70" width="270" x="1615" y="760" as="geometry" />
+        <mxCell id="hor_fk_title" value="FOREIGN KEYS (7 relaciones)" style="text;strokeColor=none;fillColor=#bbf7d0;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;fontStyle=1;" vertex="1" parent="horarios">
+          <mxGeometry y="232" width="340" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="footer" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;fontColor=#6b7280;" value="Sistema de Programación Académica PUCE-SI | Trabajo de Titulación - Adrian Renato Hermosa Ponce | 2026" vertex="1">
-          <mxGeometry height="20" width="700" x="600" y="880" as="geometry" />
+        <mxCell id="hor_fk1" value="🔗 pap_id FK → periodos" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="252" width="340" height="22" as="geometry" />
         </mxCell>
+        <mxCell id="hor_fk2" value="🔗 pam_id FK → materias" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="274" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="hor_fk3" value="🔗 pad_id FK → docentes" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="296" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="hor_fk4" value="🔗 pacu_id FK → cursos (paralelo)" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="318" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="hor_fk5" value="🔗 paal_id FK → aulas" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="340" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="hor_fk6" value="🔗 pabh_id FK → bloques_horarios" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="362" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="hor_fk7" value="🔗 padi_id FK → dias" style="text;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#1d4ed8;" vertex="1" parent="horarios">
+          <mxGeometry y="384" width="340" height="16" as="geometry" />
+        </mxCell>
+
+        <!-- ALGORITMO GENÉTICO BOX -->
+        <mxCell id="algo_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1b4b;strokeColor=#4f46e5;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="590" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="algo_title" value="🤖 ALGORITMO GENÉTICO (Python + DEAP)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="600" width="340" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="algo_content" value="• Lee datos de todas las tablas&#xa;• Aplica restricciones Oficio 902&#xa;• Calcula horas semanales: (doc+prac)/semanas&#xa;• Genera horarios optimizados&#xa;• Asigna docentes según área&#xa;• Evita conflictos de aulas/horarios&#xa;• Respeta horas mín/máx docente&#xa;&#xa;Resultado → Inserta en tabla HORARIOS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#e0e7ff;spacingLeft=10;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="630" width="330" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================== -->
+        <!-- LEYENDA -->
+        <!-- ============================================== -->
+        <mxCell id="leyenda_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="120" width="280" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_title" value="📋 LEYENDA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="130" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_pk" value="🔑 = Primary Key (PK)" style="text;html=1;strokeColor=none;fillColor=#fef3c7;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="165" width="260" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_fk" value="🔗 = Foreign Key (FK)" style="text;html=1;strokeColor=none;fillColor=#dbeafe;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="192" width="260" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nn" value="NN = NOT NULL  |  UK = UNIQUE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="219" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_ai" value="AI = AUTO_INCREMENT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="237" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_sep1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="260" width="260" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nom1" value="Tabla: tbl_programacion_academica_[x]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;spacingLeft=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1960" y="275" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nom2" value="Campo: [prefijo]_[nombre]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;spacingLeft=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1960" y="293" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_sep2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="316" width="260" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_horas" value="🟠 Campos de horas (Oficio 902)" style="text;html=1;strokeColor=none;fillColor=#fed7aa;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="331" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_banner" value="🟣 Campos Banner institucional" style="text;html=1;strokeColor=none;fillColor=#e9d5ff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="356" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_semanas" value="🟢 Número de semanas (cálculo)" style="text;html=1;strokeColor=none;fillColor=#bbf7d0;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="381" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_nrc" value="🟡 NRC (Código único de sección)" style="text;html=1;strokeColor=none;fillColor=#fef08a;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="406" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ley_pivote" value="⬜ Tablas pivote (Relación N:M)" style="text;html=1;strokeColor=none;fillColor=#e5e7eb;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="431" width="260" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- RESUMEN -->
+        <mxCell id="resumen_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1b4b;strokeColor=#4f46e5;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="480" width="280" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="res_title" value="📊 RESUMEN: 15 TABLAS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="490" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m1" value="MÓDULO 1: Autenticación (3)&#xa;• par_ → roles&#xa;• pau_ → usuarios&#xa;• paur_ → usuario_rol" style="text;html=1;strokeColor=none;fillColor=#7c3aed;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontColor=#ffffff;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="520" width="260" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m2" value="MÓDULO 2: Docentes (3)&#xa;• pad_ → docentes&#xa;• paa_ → areas&#xa;• pada_ → docente_area" style="text;html=1;strokeColor=none;fillColor=#0d9488;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontColor=#ffffff;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="583" width="260" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m3" value="MÓDULO 3: Estructura (4)&#xa;• pap_ → periodos&#xa;• pae_ → escuelas&#xa;• pac_ → carreras | pam_ → materias" style="text;html=1;strokeColor=none;fillColor=#2563eb;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontColor=#ffffff;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="646" width="260" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m4" value="MÓDULO 4: Configuración (4)&#xa;• padi_ → dias&#xa;• pabh_ → bloques_horarios&#xa;• pacu_ → cursos | paal_ → aulas" style="text;html=1;strokeColor=none;fillColor=#ea580c;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontColor=#ffffff;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="709" width="260" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="res_m5" value="MÓDULO 5: Programación (1)&#xa;• pah_ → horarios (TABLA PRINCIPAL)&#xa;  → 7 Foreign Keys" style="text;html=1;strokeColor=none;fillColor=#16a34a;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontColor=#ffffff;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="772" width="260" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- FOOTER -->
+        <mxCell id="footer" value="Sistema Inteligente de Programación Académica PUCE-SI | Trabajo de Titulación | Adrian Renato Hermosa Ponce | 2026 | 15 Tablas - Versión Final" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="700" y="860" width="900" height="25" as="geometry" />
+        </mxCell>
+
       </root>
     </mxGraphModel>
   </diagram>
